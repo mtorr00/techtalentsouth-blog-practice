@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<th:block th:replace="/fragments/head"/>
-		<title>Blog Submission</title>
+		<title>delete post</title>
 	</head>
 	<body>
 		<div th:replace="/fragments/navbar::navbarx">
@@ -12,13 +12,7 @@
 				<div class="col-md-12">
 					<div class="panel panel-primary">
 						<div class="panel-heading">
-							<h1 th:text="${blogPost.title}"></h1>
-						</div>
-						<div class="panel-body">
-							<strong>
-								<p th:text="${blogPost.author}" />
-							</strong>
-							<p th:text="${blogPost.blogEntry}"></p>
+							<h1>Post Deleted</h1>
 						</div>
 						<div class="panel-footer">
 							<a th:href="@{/}">

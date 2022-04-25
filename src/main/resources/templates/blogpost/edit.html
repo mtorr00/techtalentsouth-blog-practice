@@ -8,8 +8,8 @@
 		<div th:replace="/fragments/navbar::navbarx">
 		</div>
 		<div class="container">
-			<h1>Create a new blog post:</h1>
-			<form th:action="@{/blogposts}" th:object="${blogPost}" method="post">
+			<h1>Edit the Blog Post:</h1>
+			<form th:action="@{/blogposts/update/{id}(id=${blogPost.id})}" th:object="${blogPost}" method="post">
 				<div class="form-group">
 						<input type="text" class="form-control" th:field="*{title}" placeholder="Blog Title..."/>
 				</div>
@@ -17,11 +17,11 @@
 						<input type="text" class="form-control" th:field="*{author}" placeholder="Enter Author Name(s)..."/>
 				</div>		
 				<div class="form-group">		
-						<textarea class="form-control" th:field="*{blogEntry}" th:text="Blog Text Entry..." rows="4" cols="50"></textarea>
+						<textarea class="form-control" th:field="*{blogEntry}" th:text="*{blogEntry}" rows="4" cols="50"></textarea>
 				</div>			
-				<button class="btn btn-primary">Submit Your Post</button>
+				<button class="btn btn-primary">Submit Your Edit</button>
 			</form> 
-		</div>
+		</div>	
 		<th:block th:replace="/fragments/endbody"/>
 	</body>
 </html>
